@@ -1,7 +1,17 @@
 将文件放入git仓库：
     用git add将文件添加到仓库
     用git commit将文件提交到仓库
-git diff                        --工作区 缓存区
-git diff --cached               --缓存区 库
-git diff HEAD -- filename       --工作区 库
-git diff old_fileid new_fileid  --旧id 新id
+观察改变：
+    git diff                        --工作区 缓存区
+    git diff --cached               --缓存区 库
+    git diff HEAD -- filename       --工作区 库
+    git diff old_fileid new_fileid  --旧id 新id
+撤销修改：
+    1.没有git add时，用git checkout -- file
+    2.已经git add时，先git reset HEAD <file>回退到1.（撤销add），再按1.操作
+    3.已经git commit时，用git reset回退版本，再按照2.操作
+分支操作：
+    git branch              --管理分支
+    git switch              --切换分支
+    git switch -c           --新建+切换分支
+    git checkout            --切换到commit id
