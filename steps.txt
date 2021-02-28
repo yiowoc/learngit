@@ -1,3 +1,7 @@
 将文件放入git仓库：
     用git add将文件添加到仓库
     用git commit将文件提交到仓库
+git diff                        --工作区 缓存区
+git diff --cached               --缓存区 库
+git diff HEAD -- filename       --工作区 库
+git diff old_fileid new_fileid  --旧id 新id
